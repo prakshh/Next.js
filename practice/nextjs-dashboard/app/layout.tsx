@@ -1,3 +1,5 @@
+import '@/app/ui/global.css';
+ 
 export default function RootLayout({
   children,
 }: {
@@ -9,3 +11,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+// use global.css file to add CSS rules to all the routes in your application - such as CSS reset rules, site-wide styles for HTML elements like links, and more.
