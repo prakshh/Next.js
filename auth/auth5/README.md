@@ -2,32 +2,29 @@
 
 ## [LIVE Demo](https://socialxnext.vercel.app/)
 
-🚀 Overview
+🚀 ## Overview
 
 This is a simple authentication project built using Next.js and NextAuth.js. Users can sign in using Google or Facebook. The UI is built with Tailwind CSS and uses Lucide icons.
 
-📌 Features
+📌 ## Features
 
 * Google and Facebook authentication using NextAuth.js.
-
 * Responsive design with Tailwind CSS.
-
 * Server-side authentication handling.
 
 
-🛠️ Installation & Setup to run Locally :
+🛠️ ## Installation & Setup to run Locally :
 
-1️⃣ Clone the Repository
+1️⃣ **Clone the Repository**
 
-git clone https://github.com/prakshh/Next.js.git
+* git clone https://github.com/prakshh/Next.js.git
+* cd Next.js/auth/auth5
 
-cd Next.js/auth/auth5
+2️⃣ **Install Dependencies**
 
-2️⃣ Install Dependencies
+* npm install
 
-npm install
-
-3️⃣ Set Up Environment Variables
+3️⃣ **Set Up Environment Variables**
 
 Create a .env file in the project root (auth5) and add the following:
 
@@ -40,14 +37,14 @@ NEXTAUTH_SECRET=your_random_secret
 
 Replace the values with your actual API credentials from Google and Facebook Developer Console.
 
-4️⃣ Run the Development Server
+4️⃣ **Run the Development Server**
 
-npm run dev
+* npm run dev
 
-**If you have followed the above steps, your project should be running on localhost (http://localhost:3000) **
+**If you have followed the above steps, your project should be running on localhost (http://localhost:3000)**
 
 
-✅ Notes
+✅ ## Notes
 
 * Ensure that Google OAuth and Facebook OAuth are properly set up in their respective developer consoles.
 
