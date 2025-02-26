@@ -194,7 +194,7 @@ export default function DoubtClearingPage() {
       attachments: 0,
     };
     
-    setDoubts([newDoubt, ...prevDoubts]);
+    setDoubts(prevDoubts => [newDoubt, ...prevDoubts]);
     setNewDoubtTitle("");
     setNewDoubtContent("");
   };
