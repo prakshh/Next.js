@@ -9,7 +9,7 @@ export default function Home() {
       }}
     >
       Doubt clearing forum page is at <br />
-      http://localhost:3000/doubt-clearing
+      https://lms-lilac-eight.vercel.app/doubt-clearing
     </div>
   );
 }
