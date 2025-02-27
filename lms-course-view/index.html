@@ -17,14 +17,17 @@
         </div>
         <nav class="sidebar-nav">
           <ul>
+            <li>
+              <a href="#" data-page="dashboard"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="#" data-page="add-course"><i class="fas fa-plus-circle"></i> Add Course</a>
+            </li>
             <li class="active">
-              <a href="#"><i class="fas fa-chart-pie"></i> Dashboard</a>
+              <a href="#" data-page="view-courses"><i class="fas fa-list"></i> View Courses</a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-plus-circle"></i> Add Course</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-list"></i> View Courses</a>
+              <a href="#" data-page="view-form"><i class="fas fa-file-alt"></i> View Form</a>
             </li>
           </ul>
         </nav>
@@ -50,7 +53,7 @@
         </header>
 
         <!-- Page Content -->
-        <div class="page-content">
+        <div id="view-courses-page" class="page-content active-page">
           <h1>View Courses</h1>
           
           <div class="filters-row">
@@ -140,6 +143,222 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <!-- View Form Page -->
+        <div id="view-form-page" class="page-content">
+          <h1>Form Configuration</h1>
+          
+          <div class="form-container">
+            <div class="form-header">
+              <h2>Form Fields Configuration</h2>
+              <p>Configure the fields that will appear in your form</p>
+            </div>
+            
+            <div class="form-table-container">
+              <table class="form-table">
+                <thead>
+                  <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Required?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Title</td>
+                    <td>Text</td>
+                    <td>
+                      <span class="required-yes">
+                        <i class="fas fa-check-circle"></i> Yes
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Description</td>
+                    <td>Textarea</td>
+                    <td>
+                      <span class="required-yes">
+                        <i class="fas fa-check-circle"></i> Yes
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Category/Topic</td>
+                    <td>Dropdown</td>
+                    <td>
+                      <span class="required-yes">
+                        <i class="fas fa-check-circle"></i> Yes
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Tags</td>
+                    <td>Text (chips)</td>
+                    <td>
+                      <span class="required-no">
+                        <i class="fas fa-times-circle"></i> No
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Attachments</td>
+                    <td>File Upload</td>
+                    <td>
+                      <span class="required-no">
+                        <i class="fas fa-times-circle"></i> No
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Student Name</td>
+                    <td>Text (readonly)</td>
+                    <td>
+                      <span class="required-yes">
+                        <i class="fas fa-check-circle"></i> Yes
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Course Name</td>
+                    <td>Dropdown (auto-populated)</td>
+                    <td>
+                      <span class="required-yes">
+                        <i class="fas fa-check-circle"></i> Yes
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Anonymity Option</td>
+                    <td>Checkbox</td>
+                    <td>
+                      <span class="required-no">
+                        <i class="fas fa-times-circle"></i> No
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Visibility</td>
+                    <td>Toggle/Radio</td>
+                    <td>
+                      <span class="required-yes">
+                        <i class="fas fa-check-circle"></i> Yes
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Notify Instructor</td>
+                    <td>Checkbox</td>
+                    <td>
+                      <span class="required-no">
+                        <i class="fas fa-times-circle"></i> No
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Submission Date</td>
+                    <td>Timestamp (hidden)</td>
+                    <td>
+                      <span class="required-yes">
+                        <i class="fas fa-check-circle"></i> Yes
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="form-actions">
+              <button class="preview-form-btn">Preview Form</button>
+              <button class="save-form-btn">Save Configuration</button>
+            </div>
+            
+            <!-- Form Preview Section (Initially Hidden) -->
+            <div id="form-preview" class="form-preview">
+              <div class="preview-header">
+                <h3>Form Preview</h3>
+                <button class="close-preview-btn"><i class="fas fa-times"></i></button>
+              </div>
+              
+              <form id="sample-form">
+                <div class="form-group">
+                  <label for="title">Title <span class="required">*</span></label>
+                  <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="description">Description <span class="required">*</span></label>
+                  <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                  <label for="category">Category/Topic <span class="required">*</span></label>
+                  <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="science">Science</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="english">English</option>
+                    <option value="history">History</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="tags">Tags</label>
+                  <input type="text" id="tags" name="tags" placeholder="Enter tags separated by commas">
+                  <div class="chips-container"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="attachments">Attachments</label>
+                  <input type="file" id="attachments" name="attachments" multiple>
+                </div>
+                
+                <div class="form-group">
+                  <label for="student-name">Student Name <span class="required">*</span></label>
+                  <input type="text" id="student-name" name="student-name" value="John Doe" readonly>
+                </div>
+                
+                <div class="form-group">
+                  <label for="course-name">Course Name <span class="required">*</span></label>
+                  <select id="course-name" name="course-name" required>
+                    <option value="">Select a course</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                    <option value="algebra">Algebra</option>
+                  </select>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="anonymity" name="anonymity">
+                  <label for="anonymity">Submit anonymously</label>
+                </div>
+                
+                <div class="form-group">
+                  <label>Visibility <span class="required">*</span></label>
+                  <div class="radio-group">
+                    <input type="radio" id="public" name="visibility" value="public" checked>
+                    <label for="public">Public</label>
+                    
+                    <input type="radio" id="private" name="visibility" value="private">
+                    <label for="private">Private</label>
+                  </div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="notify" name="notify">
+                  <label for="notify">Notify instructor upon submission</label>
+                </div>
+                
+                <input type="hidden" id="submission-date" name="submission-date" value="">
+                
+                <div class="form-actions">
+                  <button type="button" class="cancel-btn">Cancel</button>
+                  <button type="submit" class="submit-btn">Submit</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
