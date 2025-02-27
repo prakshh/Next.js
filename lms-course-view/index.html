@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://i.ibb.co/Jt5z8ZV/universal-gurukul-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal Gurukul - Learning Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="https://i.ibb.co/Jt5z8ZV/universal-gurukul-logo.png" alt="Universal Gurukul Logo">
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="active">
+              <a href="#"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-plus-circle"></i> Add Course</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-list"></i> View Courses</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <div class="search-container">
+            <input type="text" placeholder="Search for dates & reports...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+          </div>
+          <div class="header-icons">
+            <button class="icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+            <button class="icon-btn"><i class="fas fa-bell"></i></button>
+            <div class="user-profile">
+              <img src="https://i.ibb.co/Lkn7rkG/avatar-placeholder.png" alt="User Avatar">
+              <span class="welcome-text">Welcome <i class="fas fa-chevron-down"></i></span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+          <h1>View Courses</h1>
+          
+          <div class="filters-row">
+            <div class="dropdown">
+              <button class="dropdown-btn">All Properties <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-btn">Today <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <button class="filters-btn"><i class="fas fa-filter"></i> Filters</button>
+            
+            <div class="action-buttons">
+              <button class="add-course-btn"><i class="fas fa-plus"></i> ADD COURSE</button>
+              <div class="dropdown">
+                <button class="export-btn">Export <i class="fas fa-chevron-down"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Courses Table -->
+          <div class="courses-table">
+            <table>
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="select-all"></th>
+                  <th>SUBJECT</th>
+                  <th>CHAPTER NAME</th>
+                  <th>TOPIC</th>
+                  <th>GRADE</th>
+                  <th>IMAGE</th>
+                  <th>VIDEO</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="row-checkbox"></td>
+                  <td>Science</td>
+                  <td>chapter working</td>
+                  <td>topics working</td>
+                  <td><a href="#" class="grade-link">grade working233339999999</a></td>
+                  <td><img src="https://i.ibb.co/Jm8vTwS/coming-soon.png" alt="Coming Soon" class="course-image"></td>
+                  <td>Available</td>
+                  <td class="action-cell">
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="row-checkbox"></td>
+                  <td>English</td>
+                  <td>test</td>
+                  <td>new topic</td>
+                  <td><a href="#" class="grade-link">chdcheck</a></td>
+                  <td><img src="https://i.ibb.co/Lkn7rkG/avatar-placeholder.png" alt="Course Image" class="course-image"></td>
+                  <td>Available</td>
+                  <td class="action-cell">
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="row-checkbox"></td>
+                  <td>Science</td>
+                  <td>new chapter</td>
+                  <td>new topic</td>
+                  <td><a href="#" class="grade-link">test</a></td>
+                  <td><img src="https://i.ibb.co/Lkn7rkG/avatar-placeholder.png" alt="Course Image" class="course-image"></td>
+                  <td>Available</td>
+                  <td class="action-cell">
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="row-checkbox"></td>
+                  <td>Mathematics</td>
+                  <td>adfadfadsf</td>
+                  <td>adfadfadf</td>
+                  <td><a href="#" class="grade-link">check!</a></td>
+                  <td><img src="https://i.ibb.co/Lkn7rkG/avatar-placeholder.png" alt="Course Image" class="course-image"></td>
+                  <td>Available</td>
+                  <td class="action-cell">
+                    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
